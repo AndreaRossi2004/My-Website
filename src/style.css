@@ -61,7 +61,6 @@ body {
 .plexus-bg {
   position: fixed;
   inset: 0;
-  background-image: url("../img/plexus.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -260,7 +259,7 @@ main {
   gap: 14px;
   margin-bottom: 56px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--fg-3);
@@ -297,7 +296,7 @@ main {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--fg-3);
@@ -347,7 +346,7 @@ main {
 
 .hero-subline {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 20px;
   color: var(--fg-2);
   margin-bottom: 40px;
   max-width: 560px;
@@ -366,7 +365,7 @@ main {
 }
 .hero-meta-item .k {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--fg-4);
@@ -374,7 +373,7 @@ main {
 }
 .hero-meta-item .v {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--fg);
   font-weight: 500;
 }
@@ -392,7 +391,7 @@ main {
   gap: 10px;
   padding: 13px 22px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -954,7 +953,7 @@ main {
 }
 .m-prefix {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1019,7 +1018,7 @@ main {
 }
 .m-counter .num .red { color: var(--red); }
 .m-counter .lbl {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1179,7 +1178,7 @@ main {
 
 .about-bio p {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.85;
   margin-bottom: 18px;
   max-width: 540px;
@@ -1193,7 +1192,7 @@ main {
   border-left: 2px solid var(--red);
   background: rgba(230,57,70,0.04);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 16px;
   color: var(--fg-2);
 }
 .about-quote span { color: var(--red); }
@@ -1262,7 +1261,7 @@ main {
   gap: 10px;
   margin-bottom: 28px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 15px;
   flex-wrap: wrap;
 }
 .filter-chip {
@@ -1327,13 +1326,13 @@ main {
   border: 1px solid var(--line-red);
   font-family: var(--font-mono);
   font-weight: 800;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--red);
   flex-shrink: 0;
 }
 .proj-status {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   padding: 3px 8px;
@@ -1352,14 +1351,14 @@ main {
 }
 .proj-slug {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--fg-4);
   margin-bottom: 18px;
 }
 
 .proj-desc {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.7;
   margin-bottom: 22px;
   flex-grow: 1;
@@ -1372,7 +1371,7 @@ main {
   border-top: 1px dashed var(--line);
   margin-bottom: 18px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--fg-3);
 }
 .proj-stats .stat { display: inline-flex; align-items: center; gap: 6px; }
@@ -1389,7 +1388,7 @@ main {
 }
 .proj-tags span {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-3);
@@ -1408,7 +1407,7 @@ main {
   align-items: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--fg-2);
@@ -1449,7 +1448,7 @@ main {
 .contacts-info h2 .accent { color: var(--red); font-style: italic; font-weight: 700; }
 .contacts-info p {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.85;
   max-width: 480px;
   margin-bottom: 32px;
@@ -1461,7 +1460,7 @@ main {
   gap: 16px 28px;
   margin-bottom: 36px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 15px;
 }
 .signal { display: flex; align-items: center; gap: 10px; color: var(--fg-2); }
 .signal .lbl { color: var(--fg-4); }
@@ -1494,14 +1493,14 @@ main {
 .contact-row:hover { background: rgba(230,57,70,0.04); }
 .contact-row .cr-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--red);
 }
 .contact-row .cr-val {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--fg);
   letter-spacing: 0;
 }
@@ -1523,7 +1522,7 @@ main {
   border: 1px solid var(--line);
   padding: 8px 12px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--fg-3);
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease;
@@ -1543,7 +1542,7 @@ footer {
   justify-content: space-between;
   border-top: 1px solid var(--line);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--fg-4);
 }
 footer .name { color: var(--fg-2); font-weight: 600; letter-spacing: 0.08em; }
