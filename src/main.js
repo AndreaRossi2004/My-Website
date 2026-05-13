@@ -264,3 +264,57 @@
   tick();
   setInterval(tick, 30000);
 })();
+
+/* ─── Hero title glitch ─── */
+(function () {
+  setTimeout(() => {
+    const spans = Array.from(document.querySelectorAll(".hero h1 .name-line span"));
+
+    // amber (#ffb700) vs electric blue (#00cfff) — uncommon split, pops on dark navy
+    const frames = [
+      { opacity: "1",   transform: "translate(-14px,0) skewX(-12deg)", textShadow: "14px 0 rgba(0,207,255,1),  -14px 0 #ffb700",  filter: "blur(1px)" },
+      { opacity: "0",   transform: "translate(0,0)",                   textShadow: "none",                                         filter: "" },
+      { opacity: "1",   transform: "translate(12px,0) skewX(10deg)",   textShadow: "-12px 0 rgba(0,207,255,1),  12px 0 #ffb700",   filter: "" },
+      { opacity: "0",   transform: "translate(-4px,0)",                textShadow: "none",                                         filter: "" },
+      { opacity: "1",   transform: "translate(-10px,0) skewX(-8deg)",  textShadow: "10px 0 rgba(0,207,255,.9), -10px 0 #ffb700",   filter: "blur(2px)" },
+      { opacity: "0.2", transform: "translate(6px,0)",                 textShadow: "none",                                         filter: "" },
+      { opacity: "1",   transform: "translate(-8px,0) skewX(6deg)",    textShadow: "8px 0 rgba(0,207,255,.7),  -8px 0 #ffb700",    filter: "" },
+      { opacity: "0",   transform: "translate(0,0)",                   textShadow: "none",                                         filter: "" },
+      { opacity: "1",   transform: "translate(-5px,0) skewX(-4deg)",   textShadow: "5px 0 rgba(0,207,255,.5),  -5px 0 #ffb700",    filter: "" },
+      { opacity: "0.7", transform: "translate(3px,0)",                 textShadow: "none",                                         filter: "" },
+      { opacity: "1",   transform: "translate(-2px,0) skewX(-2deg)",   textShadow: "2px 0 rgba(0,207,255,.3)",                     filter: "" },
+      { opacity: "1",   transform: "translate(0,0)",                   textShadow: "none",                                         filter: "" },
+    ];
+
+    const busy = new Set();
+
+    function glitch() {
+      const available = spans.filter((s) => !busy.has(s));
+      if (available.length) {
+        const span = available[Math.floor(Math.random() * available.length)];
+        busy.add(span);
+        let fi = 0;
+        const timer = setInterval(() => {
+          const f = frames[fi];
+          span.style.opacity    = f.opacity;
+          span.style.transform  = f.transform;
+          span.style.textShadow = f.textShadow;
+          span.style.filter     = f.filter;
+          fi++;
+          if (fi >= frames.length) {
+            clearInterval(timer);
+            span.style.opacity    = "";
+            span.style.transform  = "";
+            span.style.textShadow = "";
+            span.style.filter     = "";
+            busy.delete(span);
+          }
+        }, 45);
+      }
+
+      setTimeout(glitch, 4000 + Math.random() * 3000);
+    }
+
+    glitch();
+  }, 2200);
+})();
