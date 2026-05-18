@@ -328,6 +328,15 @@ Autore:         AndreaRossi2004 (rossi.andrea200439@gmail.com)
 > Aggiorna questa sezione ogni volta che apporti modifiche significative.
 > Formato: `YYYY-MM-DD — Descrizione breve`
 
+### v2.4 (2026-05-18)
+- Tech marquee aggiornato con nuovo stack: Java, JavaScript, JScript, Node.js, HTML, CSS, Python, Bash, PowerShell (track 1) + Figma, Claude, MySQL, Git, Docker, REST API, Linux/Windows Server (track 2)
+- Aggiunta sezione **Cybersecurity** sotto il marquee (chip statici flex-wrap con label `// Cybersecurity`): Metasploit, Nmap, Networking, Wireshark, Kali Linux, OSINT, Pen Testing
+- Rimossi i punti `.dot` dalle parole rotanti del manifesto (HTML + traduzioni JS)
+- Tutti e 3 i counter del manifesto ora si animano al caricamento (`data-to` + `data-prefix="+"` per `+99`)
+- Rimossa toolbar progetti (filter chips + "sorted by: recent") e relativo modulo JS
+- Rimossi badge status (● live / ● in progress) da tutte e 3 le project card
+- Rimosso contatto Telegram dalla sezione Contacts
+
 ### v2.3 (2026-05-18)
 - About h2 accorciato: rimossa riga "Sono Andrea." (ridondante con hero), rimangono "Costruisco / prodotti digitali." — aggiornata anche la traduzione EN ("I build / digital products.")
 - About paragrafi: rimosso `max-width: 540px`, sostituito con `padding-right: 32px` per più respiro orizzontale

@@ -268,12 +268,12 @@
       en: 'I build<br>digital products<span class="accent">.</span>',
     },
     'about-p1': {
-      it: 'Studente presso <strong>ITS Digital Academy</strong>, appassionato di tecnologia, design e innovazione digitale. Cerco di unire <strong>estetica</strong> e <strong>funzionalità</strong> in ogni progetto.',
-      en: 'Student at <strong>ITS Digital Academy</strong>, passionate about technology, design and digital innovation. I aim to blend <strong>aesthetics</strong> and <strong>functionality</strong> in every project.',
+      it: 'Studente presso <strong>ITS Digital Academy</strong>. Costruisco interfacce e sistemi web curati, unendo <strong>estetica</strong> e <strong>funzionalità</strong>.',
+      en: 'Student at <strong>ITS Digital Academy</strong>. I build polished web interfaces and systems, blending <strong>aesthetics</strong> and <strong>functionality</strong>.',
     },
     'about-p2': {
-      it: 'Mi occupo di sviluppo web end-to-end, dalla progettazione dell\'interfaccia alle logiche applicative, con un\'attenzione costante all\'esperienza utente e ai dettagli visivi.',
-      en: 'I work on end-to-end web development, from interface design to application logic, with constant attention to user experience and visual details.',
+      it: 'Appassionato di <strong>offensive security</strong> penetration testing ed exploit development.',
+      en: 'Passionate about <strong>offensive security</strong> penetration testing and exploit development.',
     },
     'proj-desc-1': {
       it: 'Sito personale sviluppato come CV digitale, con canvas plexus, effetto parallax e un\'estetica developer-tools curata nei minimi dettagli.',
