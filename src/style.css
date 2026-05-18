@@ -1201,7 +1201,7 @@ main {
   font-size: 18px;
   line-height: 1.85;
   margin-bottom: 18px;
-  max-width: 540px;
+  padding-right: 32px;
 }
 
 .about-bio p strong { color: var(--fg); font-weight: 600; }

@@ -224,12 +224,12 @@
   }
 
   // Counters tick up
-  function tick(el, to, dur) {
+  function tick(el, to, dur, prefix) {
     const start = performance.now();
     function step(now) {
       const t = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(to * eased);
+      el.textContent = prefix + Math.round(to * eased);
       if (t < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -237,7 +237,8 @@
 
   document.querySelectorAll(".m-counter .num[data-to]").forEach((el, i) => {
     const to = parseInt(el.dataset.to, 10);
-    setTimeout(() => tick(el, to, 1400 + i * 200), 900 + i * 180);
+    const prefix = el.dataset.prefix || '';
+    setTimeout(() => tick(el, to, 1400 + i * 200, prefix), 900 + i * 180);
   });
 
   // Pulse row: ripple a single "on" through the dots
@@ -275,14 +276,14 @@
     'btn-primary':   { it: 'Esplora i progetti', en: 'Explore projects' },
     'btn-ghost':     { it: 'Contattami',          en: 'Contact me' },
     'm-prefix':      { it: '// Costruisco',        en: '// I build' },
-    'mword-0': { it: 'interfacce<span class="dot">.</span>', en: 'interfaces<span class="dot">.</span>' },
-    'mword-1': { it: 'esperienze<span class="dot">.</span>', en: 'experiences<span class="dot">.</span>' },
-    'mword-2': { it: 'prodotti<span class="dot">.</span>',   en: 'products<span class="dot">.</span>' },
-    'mword-3': { it: 'strumenti<span class="dot">.</span>',  en: 'tools<span class="dot">.</span>' },
-    'mword-4': { it: 'storie<span class="dot">.</span>',     en: 'stories<span class="dot">.</span>' },
+    'mword-0': { it: 'interfacce', en: 'interfaces' },
+    'mword-1': { it: 'esperienze', en: 'experiences' },
+    'mword-2': { it: 'prodotti',   en: 'products' },
+    'mword-3': { it: 'strumenti',  en: 'tools' },
+    'mword-4': { it: 'storie',     en: 'stories' },
     'about-h2': {
-      it: 'Sono Andrea<span class="accent">.</span><br>Costruisco<br>prodotti digitali.',
-      en: 'I\'m Andrea<span class="accent">.</span><br>I build<br>digital products.',
+      it: 'Costruisco<br>prodotti digitali<span class="accent">.</span>',
+      en: 'I build<br>digital products<span class="accent">.</span>',
     },
     'about-p1': {
       it: 'Studente presso <strong>ITS Digital Academy</strong>, appassionato di tecnologia, design e innovazione digitale. Cerco di unire <strong>estetica</strong> e <strong>funzionalità</strong> in ogni progetto.',

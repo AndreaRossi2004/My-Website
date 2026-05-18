@@ -328,6 +328,12 @@ Autore:         AndreaRossi2004 (rossi.andrea200439@gmail.com)
 > Aggiorna questa sezione ogni volta che apporti modifiche significative.
 > Formato: `YYYY-MM-DD — Descrizione breve`
 
+### v2.3 (2026-05-18)
+- About h2 accorciato: rimossa riga "Sono Andrea." (ridondante con hero), rimangono "Costruisco / prodotti digitali." — aggiornata anche la traduzione EN ("I build / digital products.")
+- About paragrafi: rimosso `max-width: 540px`, sostituito con `padding-right: 32px` per più respiro orizzontale
+- Counter manifesto: `∞` sostituito con `+99` (più leggibile, linguaggio UI badge), rimossa classe/regola `.num-inf`
+- Aggiunto `.gitignore` con `.claude/` escluso dal tracking Git
+
 ### v2.2 (2026-05-18)
 - Sostituiti counter falsi nel manifesto hero con valori onesti:
   - `∞ Ideas in backlog` (era "12 Projects shipped")
