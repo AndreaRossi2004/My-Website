@@ -328,6 +328,13 @@ Autore:         AndreaRossi2004 (rossi.andrea200439@gmail.com)
 > Aggiorna questa sezione ogni volta che apporti modifiche significative.
 > Formato: `YYYY-MM-DD — Descrizione breve`
 
+### v2.2 (2026-05-18)
+- Sostituiti counter falsi nel manifesto hero con valori onesti:
+  - `∞ Ideas in backlog` (era "12 Projects shipped")
+  - `01 Degree in progress` (era "847 Commits / year")
+  - `3 Years building` (invariato, con animazione count-up)
+- Fix JS: selettore counter animati aggiornato a `.num[data-to]` per saltare i valori statici
+
 ### v2.1 (2026-05-18)
 - Aggiunto language toggle IT/EN in alto a destra nella navbar
   - Bottone `.lang-toggle` posizionato con `position: absolute; right: ...`

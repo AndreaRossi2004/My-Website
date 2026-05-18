@@ -235,7 +235,7 @@
     requestAnimationFrame(step);
   }
 
-  document.querySelectorAll(".m-counter .num").forEach((el, i) => {
+  document.querySelectorAll(".m-counter .num[data-to]").forEach((el, i) => {
     const to = parseInt(el.dataset.to, 10);
     setTimeout(() => tick(el, to, 1400 + i * 200), 900 + i * 180);
   });
