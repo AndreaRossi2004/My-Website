@@ -328,6 +328,15 @@ Autore:         AndreaRossi2004 (rossi.andrea200439@gmail.com)
 > Aggiorna questa sezione ogni volta che apporti modifiche significative.
 > Formato: `YYYY-MM-DD — Descrizione breve`
 
+### v2.1 (2026-05-18)
+- Aggiunto language toggle IT/EN in alto a destra nella navbar
+  - Bottone `.lang-toggle` posizionato con `position: absolute; right: ...`
+  - Tutte le sezioni traducibili marcate con `data-i18n` nel HTML
+  - Modulo JS con oggetto `T` (translations) e funzione `applyLang(l)`
+  - Lingua persistita in `localStorage('lang')`, default `'it'`
+  - `window.__lang` come stato condiviso tra i moduli IIFE
+  - Feedback "Copiata!" / "Copied!" nel copy-email button
+
 ### v2 (attuale — 2026-05)
 - Refactor completo dell'hero: rimosso IDE card e Dossier card, sostituiti con Manifesto kinetic card
 - About section: rimosso profile.json IDE card e skills board, sostituiti con tech marquee

@@ -216,6 +216,26 @@ body {
   50% { opacity: 0.35; }
 }
 
+.lang-toggle {
+  position: absolute;
+  right: clamp(24px, 5vw, 56px);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 5px 10px;
+  font-family: var(--font-data);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--fg-3);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.lang-toggle:hover { border-color: var(--line-strong); color: var(--fg); }
+#lang-active { color: var(--fg); font-weight: 500; }
+.lang-sep { color: var(--fg-4); }
+
 /* ───────────────── Status bar (bottom, VS Code) ───────────────── */
 
 .statusbar {

@@ -167,7 +167,7 @@
       await navigator.clipboard.writeText(btn.dataset.email);
       const orig = btn.innerHTML;
       btn.innerHTML =
-        '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copiata';
+        `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span>${(window.__lang || 'it') === 'it' ? 'Copiata!' : 'Copied!'}</span>`;
       btn.style.color = "#3ddc84";
       btn.style.borderColor = "rgba(61,220,132,0.35)";
       setTimeout(() => {
@@ -263,6 +263,76 @@
   }
   tick();
   setInterval(tick, 30000);
+})();
+
+/* ─── Language toggle ─── */
+(function () {
+  const T = {
+    'hero-subline': {
+      it: '<span class="red">//</span> Digital developer &amp; designer. Costruisco interfacce <strong>pulite</strong>, sistemi <strong>solidi</strong> e prodotti web che hanno un\'<strong>identità</strong>.',
+      en: '<span class="red">//</span> Digital developer &amp; designer. I build <strong>clean</strong> interfaces, <strong>solid</strong> systems and web products with a distinct <strong>identity</strong>.',
+    },
+    'btn-primary':   { it: 'Esplora i progetti', en: 'Explore projects' },
+    'btn-ghost':     { it: 'Contattami',          en: 'Contact me' },
+    'm-prefix':      { it: '// Costruisco',        en: '// I build' },
+    'mword-0': { it: 'interfacce<span class="dot">.</span>', en: 'interfaces<span class="dot">.</span>' },
+    'mword-1': { it: 'esperienze<span class="dot">.</span>', en: 'experiences<span class="dot">.</span>' },
+    'mword-2': { it: 'prodotti<span class="dot">.</span>',   en: 'products<span class="dot">.</span>' },
+    'mword-3': { it: 'strumenti<span class="dot">.</span>',  en: 'tools<span class="dot">.</span>' },
+    'mword-4': { it: 'storie<span class="dot">.</span>',     en: 'stories<span class="dot">.</span>' },
+    'about-h2': {
+      it: 'Sono Andrea<span class="accent">.</span><br>Costruisco<br>prodotti digitali.',
+      en: 'I\'m Andrea<span class="accent">.</span><br>I build<br>digital products.',
+    },
+    'about-p1': {
+      it: 'Studente presso <strong>ITS Digital Academy</strong>, appassionato di tecnologia, design e innovazione digitale. Cerco di unire <strong>estetica</strong> e <strong>funzionalità</strong> in ogni progetto.',
+      en: 'Student at <strong>ITS Digital Academy</strong>, passionate about technology, design and digital innovation. I aim to blend <strong>aesthetics</strong> and <strong>functionality</strong> in every project.',
+    },
+    'about-p2': {
+      it: 'Mi occupo di sviluppo web end-to-end, dalla progettazione dell\'interfaccia alle logiche applicative, con un\'attenzione costante all\'esperienza utente e ai dettagli visivi.',
+      en: 'I work on end-to-end web development, from interface design to application logic, with constant attention to user experience and visual details.',
+    },
+    'proj-desc-1': {
+      it: 'Sito personale sviluppato come CV digitale, con canvas plexus, effetto parallax e un\'estetica developer-tools curata nei minimi dettagli.',
+      en: 'Personal site built as a digital CV, with a plexus canvas, parallax effect and a meticulously crafted developer-tools aesthetic.',
+    },
+    'proj-desc-2': {
+      it: 'Interfaccia utente per piattaforma e-commerce con carrello dinamico, filtri prodotto e checkout flow, componenti tipizzati.',
+      en: 'User interface for an e-commerce platform with a dynamic cart, product filters and checkout flow, typed components.',
+    },
+    'proj-desc-3': {
+      it: 'Dashboard interattiva per visualizzazione dati in real-time, con grafici dinamici, filtri avanzati e architettura a moduli.',
+      en: 'Interactive dashboard for real-time data visualization, with dynamic charts, advanced filters and a modular architecture.',
+    },
+    'contacts-h2': {
+      it: 'Parliamo<span class="accent">.</span><br>Costruiamo<br>qualcosa.',
+      en: 'Let\'s talk<span class="accent">.</span><br>Let\'s build<br>something.',
+    },
+    'contacts-p': {
+      it: 'Sono disponibile per <strong style="color:var(--fg)">collaborazioni</strong>, <strong style="color:var(--fg)">stage</strong> e nuove opportunità. Rispondo sempre entro 24h.',
+      en: 'I\'m available for <strong style="color:var(--fg)">collaborations</strong>, <strong style="color:var(--fg)">internships</strong> and new opportunities. I always reply within 24h.',
+    },
+    'copy-email-btn': { it: 'Copia email', en: 'Copy email' },
+  };
+
+  function applyLang(l) {
+    window.__lang = l;
+    localStorage.setItem('lang', l);
+    document.documentElement.lang = l;
+    const activeEl   = document.getElementById('lang-active');
+    const inactiveEl = document.getElementById('lang-inactive');
+    if (activeEl)   activeEl.textContent   = l.toUpperCase();
+    if (inactiveEl) inactiveEl.textContent = l === 'it' ? 'EN' : 'IT';
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const t = T[el.dataset.i18n];
+      if (t) el.innerHTML = t[l];
+    });
+  }
+
+  window.__lang = localStorage.getItem('lang') || 'it';
+  const btn = document.getElementById('lang-toggle');
+  if (btn) btn.addEventListener('click', () => applyLang(window.__lang === 'it' ? 'en' : 'it'));
+  applyLang(window.__lang);
 })();
 
 /* ─── Hero title glitch ─── */
